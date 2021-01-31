@@ -1,12 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Template101</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .links {
+        transition: height 0.6s ease-in-out !important;
+      }
+      #toggle-btn:checked ~ .links {
+        height: 28rem !important;
+        /* transition: height 0.6s ease-in-out !important; */
+      }
+      .bg {
+        background-image: url("./bg.jpg");
+      }
+    </style>
+  </head>
+  <body class="font-sans">
+    <div class="fixed top-0 w-screen z-50 bg-white lg:px-16 xl:px-36">
+      <div class="lg:container mx-auto">
+        <nav
+          class="flex flex-col items-center md:flex-row pt-4 pb-5 px-5 md:px-3 text-base lg:text-sm 2xl:text-lg"
+        >
+          <div class="logo w-full flex flex-row justify-between items-center">
+            <h2 class="text-lg flex flex-row items-center">
+              <i
+                class="bi bi-grid-3x3-gap-fill text-blue-500 text-xl -mt-1"
+              ></i>
+              <span class="font-semibold">San</span>Francisco
+            </h2>
+            <div
+              class="flex flex-row items-center space-x-5 text-center md:hidden"
+            >
+              <button class="relative focus:outline-none">
+                <i class="text-lg bi bi-cart3"></i
+                ><span
+                  class="absolute left-3 border-none shadow -top-1 text-sm w-5 h-5 rounded-full bg-green-500 text-white"
+                  >3</span
+                >
+              </button>
+              <button class="focus:outline-none">
+                <i class="text-lg bi bi-search"></i>
+              </button>
+              <label for="toggle-btn" class="text-center"
+                ><i class="text-2xl bi bi-list"></i
+              ></label>
+            </div>
+          </div>
+          <input type="checkbox" class="hidden" id="toggle-btn" />
+          <ul
+            class="links divide-y-2 md:divide-y-0 md:space-x-3 divide-gray-100 flex flex-col md:flex-row items-center justify-between h-0 overflow-hidden md:h-full md:overflow-visible text-center"
+          >
+            <li class="pt-3 md:p-0">
+              <a href="#" class="flex flex-row items-center"
+                >Home <i class="bi bi-chevron-down text-sm"></i
+              ></a>
+            </li>
+            <li class="pt-3 md:p-0"><a href="#">About</a></li>
+            <li class="pt-3 md:p-0"><a href="#">Services</a></li>
+            <li class="pt-3 md:p-0"><a href="#">Work</a></li>
+            <li class="pt-3 md:p-0"><a href="#">Pricing</a></li>
+            <li class="pt-3 md:p-0"><a href="#">Blog</a></li>
+            <li class="pt-3 md:p-0"><a href="#">Contact</a></li>
+            <li
+              class="relative pt-3 md:p-0 hidden md:block flex flex-row items-start -mt-1 cursor-pointer"
+            >
+              <i class="text-lg bi bi-cart3"></i>
+              <span
+                class="absolute left-3 border-none shadow text-xs w-4 h-4 rounded-full bg-green-500 text-white"
+                >3</span
+              >
+            </li>
+            <li class="pt-3 md:p-0 hidden md:block -mt-1 cursor-pointer">
+              <i class="text-lg bi bi-search"></i>
+            </li>
+            <button
+              class="py-2 break-normal text-sm px-6 mt-3 md:m-0 text-white bg-blue-600 focus:outline-none focus:bg-blue-700 rounded-full shadow hover:shadow-md border-none items-center"
+            >
+              Get&nbsp;Started
+            </button>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <header
+      class="relative bg w-full mt-12 h-96 pt-18 bg-fixed bg-bottom sm:bg-center bg-no-repeat bg-cover flex justify-center items-center"
+    >
+      <span class="absolute w-full h-full bg-black opacity-30"></span>
+      <div class="text-white z-10 text-center">
+        <h1 class="text-xl opacity-90 tracking-wider lg:text-2xl 2xl:text-3xl">
+          Latest News & Insights
+        </h1>
+        <p class="opacity-80 text-sm mt-6">
+          HOME <i class="bi bi-chevron-compact-right"></i>
+          <span class="opacity-70">BLOG</span>
+        </p>
+      </div>
+    </header>
+    <main class="md:px-8 lg:px-12 xl:px-32">
+      <div class="lg:container mx-auto">
+        <div
+          class="w-full mt-12 md:mt-16 lg:mt-20 lg:mt-24 grid sm:grid-cols-3"
+        >
+          <div class="px-10 sm:order-last">
+            <div class="flex flex-row overflow-hidden justify-center w-full">
+              <input
+                type="text"
+                placeholder="Enter Keyword"
+                class="rounded-l-full placeholder-gray-400 bg-gray-200 pr-2 pl-4 text-sm w-full border-none focus:outline-none"
+              />
+              <button
+                class="bg-gray-200 pt-1 pb-3 px-4 rounded-r-full border-none focus:outline-none"
+              >
+                <i class="text-blue-600 font-semibold bi bi-search"></i>
+              </button>
+            </div>
+            <p class="font-semibold text-base mt-8 opacity-90">Categories</p>
+            <ul class="space-y-2 w-full mt-4 mb-8 text-sm">
+              <li
+                class="w-full flex flex-row justify-between pb-2 pt-1 border-b border-gray-200 opacity-90 text-blue-800 font-semibold"
+              >
+                App
+                <span
+                  class="text-white bg-blue-600 px-3 rounded-full align-middle"
+                  >2</span
+                >
+              </li>
+              <li
+                class="w-full flex flex-row justify-between pb-2 pt-1 border-b border-gray-200 opacity-90"
+              >
+                Design<span
+                  class="text-white bg-blue-600 px-3 rounded-full align-middle"
+                  >3</span
+                >
+              </li>
+              <li
+                class="w-full flex flex-row justify-between pb-2 pt-1 border-b border-gray-200 opacity-90"
+              >
+                Software
+                <span
+                  class="text-white bg-blue-600 px-3 rounded-full align-middle"
+                  >8</span
+                >
+              </li>
+              <li
+                class="w-full flex flex-row justify-between pb-2 pt-1 border-b border-gray-200 opacity-90"
+              >
+                Technology<span
+                  class="text-white bg-blue-600 px-3 rounded-full align-middle"
+                  >5</span
+                >
+              </li>
+            </ul>
+            <div class="hidden sm:block">
+              <p class="font-semibold text-base mt-8 opacity-90">
+                Popular Posts
+              </p>
+              <ul class="space-y-2 w-full mt-4 mb-8">
+                <li class="py-4 border-b border-gray-200">
+                  <a href="#">
+                    <p class="text-xs text-gray-400">Software</p>
+                    <p
+                      class="text-base font-semibold text-blue-800 opacity-90 mt-2"
+                    >
+                      iPhone 12: Software comes first
+                    </p>
+                  </a>
+                </li>
+                <li class="py-4 border-b border-gray-200">
+                  <p class="text-xs text-gray-400">Technology</p>
+                  <p class="text-base font-semibold opacity-90 mt-2">
+                    The evolution of technology services
+                  </p>
+                </li>
+                <li class="py-4 border-b border-gray-200">
+                  <p class="text-xs text-gray-400">Design</p>
+                  <p class="text-base font-semibold opacity-90 mt-2">
+                    The evolution of technology services
+                  </p>
+                </li>
+                <li class="py-4 border-b border-gray-200">
+                  <p class="text-xs text-gray-400">App</p>
+                  <p class="text-base font-semibold opacity-90 mt-2">
+                    The evolution of technology services
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="relative w-full rounded h-72 sm:h-auto overflow-hidden mb-8"
+            >
+              <img src="./img004.jpg" alt="img" class="w-full object-center" />
+              <span
+                class="z-10 absolute top-0 left-0 w-full h-full bg-blue-900 opacity-30"
+              ></span>
+              <div
+                class="z-20 absolute bottom-0 text-white w-full h-full md:h-3/4 flex flex-col justify-evenly items-center text-center px-14 sm:px-2 md:px-8 lg:px-14"
+              >
+                <p class="text-base 2xl:text-lg font-semibold opacity-90">
+                  Join San Francisco
+                </p>
+                <p class="text-base sm:text-sm opacity-90 2xl:text-lg">
+                  Create an account to receive great stories in your inbox.
+                </p>
+                <button
+                  class="text-xs 2xl:text-base px-10 sm:px-6 lg:px-10 pt-2 pb-3 shadow opacity-80 bg-green-600 rounded-full"
+                >
+                  Sign Up
+                </button>
+              </div>
+            </div>
+            <div class="hidden sm:block">
+              <p class="font-semibold text-base mt-8 opacity-90">Tags</p>
+              <ul
+                class="flex flex-row flex-wrap space-x-1 space-y-1 text-xs mt-8 items-center"
+              >
+                <li
+                  class="text-blue-700 bg-blue-100 px-2 pt-1 pb-2 -mb-1 rounded"
+                >
+                  App
+                </li>
+                <li class="text-blue-700 bg-blue-100 px-2 pt-1 pb-2 rounded">
+                  Branding
+                </li>
+                <li class="text-blue-700 bg-blue-100 px-2 pt-1 pb-2 rounded">
+                  Development
+                </li>
+                <li class="text-blue-700 bg-blue-100 px-2 pt-1 pb-2 rounded">
+                  Design
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="sm:col-span-2 px-10 sm:px-0 sm:pl-5 md:p-0 space-y-10">
+            <div class="border-b pb-9 border-gray-200">
+              <img class="w-full" src="./img002.jpg" alt="img" />
+              <h2
+                class="font-semibold text-lg sm:text-xl 2xl:text-2xl my-4 opacity-90"
+              >
+                How to lead employees through technology changes
+              </h2>
+              <a href="#" class="text-sm text-blue-600 font-semibold my-4"
+                >Technology</a
+              >
+              <p class="text-gray-500 text-xs my-4">
+                <i
+                  class="bi bi-grid-3x3-gap-fill text-2xl px-2 pb-2 overflow-hidden bg-blue-600 text-white rounded-full mr-3"
+                ></i>
+                Written by <span class="text-black">Admin</span>, March 10, 2020
+              </p>
+              <p class="text-sm 2xl:text-base text-gray-500 my-6">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+                nostrum assumenda qui optio sint accusamus illo, ex eveniet
+                dolores velit nulla laudantium unde, dignissimos architecto
+                quisquam repellendus quidem praesentium natus! Lorem ipsum dolor
+                sit amet, consectetur adipisicing elit. A, incidunt possimus
+                animi optio illo, corporis quibusdam id hic sed vel nemo fugit
+                quisquam quod consequuntur, est aliquid autem in .
+              </p>
+              <button
+                class="text-xs 2xl:text-sm text-blue-700 font-semibold rounded-full px-9 py-3 bg-blue-100 border-none"
+              >
+                Read More
+              </button>
+            </div>
+            <div class="border-b pb-9 border-gray-200">
+              <img class="w-full" src="./img001.jpg" alt="img" />
+              <h2
+                class="font-semibold text-lg sm:text-xl 2xl:text-2xl my-4 opacity-90"
+              >
+                How to lead employees through technology changes
+              </h2>
+              <a href="#" class="text-sm text-blue-600 font-semibold my-4"
+                >Technology</a
+              >
+              <p class="text-gray-500 text-xs my-4">
+                <i
+                  class="bi bi-grid-3x3-gap-fill text-2xl px-2 pb-2 overflow-hidden bg-blue-600 text-white rounded-full mr-3"
+                ></i>
+                Written by <span class="text-black">Admin</span>, March 10, 2020
+              </p>
+              <p class="text-sm 2xl:text-base text-gray-500 my-6">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+                nostrum assumenda qui optio sint accusamus illo, ex eveniet
+                dolores velit nulla laudantium unde, dignissimos architecto
+                quisquam repellendus quidem praesentium natus! Lorem ipsum dolor
+                sit amet, consectetur adipisicing elit. A, incidunt possimus
+                animi optio illo, corporis quibusdam id hic sed vel nemo fugit
+                quisquam quod consequuntur, est aliquid autem in .
+              </p>
+              <button
+                class="text-xs 2xl:text-sm text-blue-700 font-semibold rounded-full px-9 py-3 bg-blue-100 border-none"
+              >
+                Read More
+              </button>
+            </div>
+            <div class="border-b pb-9 border-gray-200">
+              <img class="w-full" src="./img003.jpg" alt="img" />
+              <h2
+                class="font-semibold text-lg sm:text-xl 2xl:text-2xl my-4 opacity-90"
+              >
+                How to lead employees through technology changes
+              </h2>
+              <a href="#" class="text-sm text-blue-600 font-semibold my-4"
+                >Technology</a
+              >
+              <p class="text-gray-500 text-xs my-4">
+                <i
+                  class="bi bi-grid-3x3-gap-fill text-2xl px-2 pb-2 overflow-hidden bg-blue-600 text-white rounded-full mr-3"
+                ></i>
+                Written by <span class="text-black">Admin</span>, March 10, 2020
+              </p>
+              <p class="text-sm 2xl:text-base text-gray-500 my-6">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+                nostrum assumenda qui optio sint accusamus illo, ex eveniet
+                dolores velit nulla laudantium unde, dignissimos architecto
+                quisquam repellendus quidem praesentium natus! Lorem ipsum dolor
+                sit amet, consectetur adipisicing elit. A, incidunt possimus
+                animi optio illo, corporis quibusdam id hic sed vel nemo fugit
+                quisquam quod consequuntur, est aliquid autem in .
+              </p>
+              <button
+                class="text-xs 2xl:text-sm text-blue-700 font-semibold rounded-full px-9 py-3 bg-blue-100 border-none"
+              >
+                Read More
+              </button>
+            </div>
+            <div
+              class="w-full flex flex-row justify-center text-gray-400 text-sm"
+            >
+              <div class="space-x-2">
+                <button
+                  class="py-1 px-3 shadow border rounded border-gray-300 focus:outline-none"
+                >
+                  <i class="bi bi-chevron-compact-left"></i>
+                </button>
+                <button
+                  class="py-1 px-3 shadow border rounded border-gray-300 bg-blue-700 text-white hover:bg-blue-600 focus:outline-none"
+                >
+                  1
+                </button>
+                <button
+                  class="py-1 px-3 shadow border rounded border-gray-300 focus:outline-none"
+                >
+                  2
+                </button>
+                <button
+                  class="py-1 px-3 shadow border rounded border-gray-300 focus:outline-none"
+                >
+                  3
+                </button>
+                ...
+                <button
+                  class="py-1 px-3 shadow border rounded border-gray-300 focus:outline-none"
+                >
+                  4
+                </button>
+                <button
+                  class="py-1 px-3 shadow border rounded border-gray-300 focus:outline-none"
+                >
+                  <i class="bi bi-chevron-compact-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
