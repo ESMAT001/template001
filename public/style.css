@@ -31179,7 +31179,7 @@ video {
 }
 
 .bg {
-  background-image: url("./bg.jpg");
+  background-image: url("./images/bg.jpg");
 }
 
 @media (min-width: 640px){
