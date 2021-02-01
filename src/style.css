@@ -3,13 +3,17 @@
 @tailwind components;
 @tailwind utilities;
 
+.contain {
+  @apply md:px-8 lg:px-12 xl:px-32;
+}
+
 .links {
-    transition: height 0.6s ease-in-out !important;
-  }
-  #toggle-btn:checked ~ .links {
-    height: 28rem !important;
-    /* transition: height 0.6s ease-in-out !important; */
-  }
-  .bg {
-    background-image: url("../images/bg.jpg");
-  }
+  transition: height 0.6s ease-in-out !important;
+}
+#toggle-btn:checked ~ .links {
+  height: 24rem !important;
+  /* transition: height 0.6s ease-in-out !important; */
+}
+.bg {
+  background-image: url("../images/bg.jpg");
+}
